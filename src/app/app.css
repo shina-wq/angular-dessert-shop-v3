@@ -1,0 +1,27 @@
+main {
+  display: grid;
+  gap: 32px;
+  max-width: 1296px; /* 1216px content + side padding */
+  margin: 0 auto;
+  padding: 24px;
+}
+
+@media (min-width: 640px) {
+  main {
+    padding: 40px;
+  }
+}
+
+/* Desktop: products on the left, cart sticks on the right */
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 1fr 384px;
+    align-items: start;
+    padding: 88px 40px;
+  }
+
+  app-cart {
+    position: sticky;
+    top: 24px;
+  }
+}
